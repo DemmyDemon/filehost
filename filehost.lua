@@ -41,7 +41,7 @@ local function handler(request, response)
     local _, filename, ext = splitFilename(request.path)
     local fullpath = prefix .. filename
 
-    local useMimeType = "text/plain"
+    local useMimeType = "application/octet-stream"
     if MIME[ext] then
         useMimeType = MIME[ext]
     end
