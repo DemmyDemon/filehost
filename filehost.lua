@@ -29,6 +29,7 @@ local function sendFileData(mimeType, path, response)
         response.write(data)
     end
     file:close()
+    response.send()
     return true
 end
 
